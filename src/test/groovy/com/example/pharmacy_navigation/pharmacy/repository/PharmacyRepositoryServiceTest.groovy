@@ -4,7 +4,7 @@ import com.example.pharmacy_navigation.AbstractIntegrationContainerBaseTest
 import com.example.pharmacy_navigation.pharmacy.entity.Pharmacy
 import org.springframework.beans.factory.annotation.Autowired
 
-class PharmacyRepositoryTest extends AbstractIntegrationContainerBaseTest {
+class PharmacyRepositoryServiceTest extends AbstractIntegrationContainerBaseTest {
 
     @Autowired
     private PharmacyRepository pharmacyRepository
