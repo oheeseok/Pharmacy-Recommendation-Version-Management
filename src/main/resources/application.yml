@@ -35,7 +35,7 @@ spring:
     port: 6379
   jpa:
     hibernate:
-      ddl-auto: create # 운영중인 테이블을 drop할 수 있기 때문에 실제 구동 환경에서는 쓰면 안된다
+      ddl-auto: validate # create: 운영중인 테이블을 drop할 수 있기 때문에 실제 구동 환경에서는 쓰면 안된다
     show-sql: true
 ---
 spring:
