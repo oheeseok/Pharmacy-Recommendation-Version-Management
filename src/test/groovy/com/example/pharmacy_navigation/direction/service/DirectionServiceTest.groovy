@@ -21,14 +21,14 @@ class DirectionServiceTest extends Specification {
                 .pharmacyName("돌곶이온누리약국")
                 .pharmacyAddress("주소1")
                 .latitude(37.61040424)
-                .longtitude(127.0569046)
+                .aDouble(127.0569046)
                 .build(),
             PharmacyDto.builder()
                 .id(2L)
                 .pharmacyName("호수온누리약국")
                 .pharmacyAddress("주소2")
                 .latitude(37.60894036)
-                .longtitude(127.029052)
+                .aDouble(127.029052)
                 .build()
         )
     }
@@ -64,7 +64,7 @@ class DirectionServiceTest extends Specification {
                     .pharmacyName("경기약국")
                     .pharmacyAddress("주소3")
                     .latitude(37.3825107393401)
-                    .longtitude(127.236707811313)
+                    .aDouble(127.236707811313)
                     .build())
 
         def addressName = "서울 성북구 종암로10길"

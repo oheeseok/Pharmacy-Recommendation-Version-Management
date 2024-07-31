@@ -34,7 +34,7 @@ public class PharmacySearchService {
                 .pharmacyAddress(pharmacy.getPharmacyAddress())
                 .pharmacyName(pharmacy.getPharmacyName())
                 .latitude(pharmacy.getLatitude())
-                .longtitude(pharmacy.getLongitude())
+                .aDouble(pharmacy.getLongitude())
                 .build();
     }
 }

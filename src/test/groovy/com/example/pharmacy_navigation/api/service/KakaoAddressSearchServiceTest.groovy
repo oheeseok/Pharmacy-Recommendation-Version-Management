@@ -34,4 +34,28 @@ class KakaoAddressSearchServiceTest extends AbstractIntegrationContainerBaseTest
 
     }
 
+    def "정상적인 주소를 입력했을 경우, 정상적으로 위도 경도로 변환된다"() {
+        given:
+        boolean actualresult = false
+
+        when:
+        def searchResult = kakaoAddressSearchService.requestAddressSearch(inputAddress)
+
+        then:
+        if(searchResult == null) actualresult = false
+        else searchResult.getDocumentDtoList().size() > 0
+
+        where:
+        inputAddress | expectedResult
+        "서울 특별시 성북구 종암동" | true
+        "서울 성북구 종암동 91" | true
+        "서울 대학로" | true
+        "서울 성북구 종암동 없는 주소" | false
+        "광진구 구의동 251-45" | true
+        "성남시 수정구 위례순환로 100" | true
+        "마포구 희우정로 123" | true
+        "마포구 희우정로 1234" | false
+        "" | false
+    }
+
 }

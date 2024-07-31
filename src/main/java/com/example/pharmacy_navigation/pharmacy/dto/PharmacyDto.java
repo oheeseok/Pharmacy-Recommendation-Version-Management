@@ -14,5 +14,5 @@ public class PharmacyDto {
     private String pharmacyName;
     private String pharmacyAddress;
     private double latitude;
-    private double longtitude;
+    private double longitude;
 }
